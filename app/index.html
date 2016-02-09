@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phone integration test</title>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $( document ).ready(function() {
+      if (window.addEventListener) {
+        // Normal browsers
+        window.addEventListener("storage", handler, false);
+      } else {
+        // for IE (why make your life more difficult)
+        window.attachEvent("onstorage", handler);
+      }
+
+      function handler(e) {
+        var payload = JSON.parse(localStorage.getItem('payload'));
+        console.log('Successfully communicate with other tab');
+        console.log('Received data: ' + payload);
+        $('#telnr').html(payload.anr);
+        $('#bolag').html(payload.brand);
+      }
+    });
+  </script>
+</head>
+<body>
+  <div>
+    <p>Telnr: <span id="telnr"></span></p>
+    <p>Bolag: <span id="bolag"></span></p>
+  </div>
+</body>
+</html>

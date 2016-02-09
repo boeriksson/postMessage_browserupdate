@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "author": "",
+  "homepage": "",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "http-server": "^0.8.5",
+    "jquery": "^2.2.0",
+    "livereload": "^0.3.7",
+    "npm-run-all": "^1.2.11"
+  },
+  "scripts": {
+    "server:livereload": "livereload ./app -i 200",
+    "server:serve": "http-server ./app -p 8080",
+    "prestart": "npm install",
+    "start": "npm-run-all --parallel server:*"
+  }
+}

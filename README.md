@@ -1,1 +1,3 @@
-# postMessage_browserupdate
+# PostMessage BrowserUpdate
+
+I have to come up with an idea to update a one-page app by shooting an url into the browser. There's a lot of drawbacks to this type of solutions, not the least that it gets very "hackish", but here is one way to do it...

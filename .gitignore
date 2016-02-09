@@ -1,0 +1,10 @@
+# Ignore IDE's
+*.iml
+
+# Ignore generated sources
+/node_modules
+/dev
+/dist
+/.idea
+coverage
+reports

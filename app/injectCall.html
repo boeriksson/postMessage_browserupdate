@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone integration inject</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            console.log("ready!");
+            var payload = {
+                anr: '555-8828282',
+                brand: 'Taxi020'
+            };
+            localStorage.setItem('payload', JSON.stringify(payload));
+        });
+    </script>
+</head>
+<body>
+loading...
+</body>
+</html>
